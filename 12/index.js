@@ -31,37 +31,23 @@ const pessoas = [
     },
 ];
 
-const carreira = "Programador";
-const idade = 20;
-
-
-const pessoasPorIdade = pessoas.filter((pessoa) => {
-
-    return pessoa.idade > idade && pessoa.profissao === carreira;
-
+const programadoresMaiorDe20anos = pessoas.filter(function (data) {
+    return data.profissao == 'Programador' && data.idade > 20
 });
 
-const carreira2 = "Jornalista";
-const idade2 = 30;
+console.log(programadoresMaiorDe20anos);
 
-const pessoasPorIdade2 = pessoas.filter((pessoa) => {
-
-    return pessoa.idade > idade && pessoa.profissao === carreira2;
-
+const jornalistasMaiorDe30anos = pessoas.filter(function (data) {
+    return data.profissao == 'Jornalista' && data.idade > 30
 });
 
-const idade3 = 29;
+console.log(jornalistasMaiorDe30anos);
 
-const pessoasPorIdade3 = pessoas.filter((pessoa) => {
-
-    return pessoa.idade <= idade3 && (pessoa.profissao === carreira2 || pessoa.profissao === carreira);
-
+const jornalistasProgramadoresJovens = pessoas.filter(function (data) {
+    return (data.profissao == 'Jornalista' || data.profissao == 'Programador') && data.idade < 30
 });
 
-
-
-console.log(pessoasPorIdade3);
-
+console.log(jornalistasProgramadoresJovens);
 
 
 
