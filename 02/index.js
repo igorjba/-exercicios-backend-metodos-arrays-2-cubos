@@ -1,9 +1,11 @@
 const palavras = ["livro", "caneta", "sol", "carro", "orelha"];
 
-const verificarPalavra = palavras.every((palavra) => {
-
-    return palavra.length < 6;
-
+const existePalavraInvalida = palavras.some((valor) => {
+    return valor.length > 5;
 });
 
-console.log(verificarPalavra);
+if (existePalavraInvalida) {
+    console.log("existe palavra inválida");
+} else {
+    console.log("array validado")
+}
