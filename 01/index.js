@@ -1,10 +1,6 @@
 const livros = ['Guerra e Paz', 'A Montanha Mágica', 'Cem Anos de Solidão', 'Dom Quixote', 'A Divina Comédia'];
 const nomeDoLivro = "Dom Quixote";
 
-const localDoLivro = livros.findIndex((livro) => {
+const localDoLivro = livros.indexOf(nomeDoLivro) + 1;
 
-    return livro === nomeDoLivro
-
-});
-
-console.log(localDoLivro);
+console.log(`O livro está na posição ${localDoLivro}.`);
