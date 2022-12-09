@@ -10,35 +10,8 @@
 
 const frutas = ["Manga", "UVA", "abacaxi", "banaNA", "MAçã"];
 
-const ajustarLetras = ((lista) => {
-    const ListaMinusculo = lista.map((fruta) => {
-
-        return fruta.toLowerCase();
-
-    });
-
-    let frutaMaiuscula = [];
-
-    const ListaMaiuscula = ListaMinusculo.map((nomeDaFruta) => {
-
-        let primeiraLetra = nomeDaFruta.slice(0, 1);
-        let segundaLetra = nomeDaFruta.slice(1);
-
-        frutaMaiuscula.push(primeiraLetra.toUpperCase() + segundaLetra)
-
-    });
-
-    let frutaComIndice = [];
-
-    const ListaComIndice = frutaMaiuscula.map((nome) => {
-        let indiceDaFruta = frutaMaiuscula.indexOf(nome)
-
-        frutaComIndice.push(indiceDaFruta + " - " + nome);
-
-    });
-
-    console.log(frutaComIndice);
-
+const arrayModificado = frutas.map((fruta, indice) => {
+    return `${indice} - ${fruta.slice(0, 1).toUpperCase()}${fruta.slice(1).toLowerCase()}`;
 });
 
-ajustarLetras(frutas);
+console.log(arrayModificado);
